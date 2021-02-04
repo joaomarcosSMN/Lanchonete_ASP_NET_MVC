@@ -1,0 +1,14 @@
+@model CarrinhoCompraViewModel
+
+@if (Model.CarrinhoCompra.CarrinhoCompraItens.Count >= 0)
+{
+  <li style="display:flex;align-items:center;">
+    <a asp-controller="CarrinhoCompra" asp-action="Index">
+      @* Ver Carrinho *@
+      <i class="bi bi-cart2"></i>
+      <span id="cart-status">
+        @Model.CarrinhoCompra.CarrinhoCompraItens.Count
+      </span>
+    </a>
+  </li>
+}

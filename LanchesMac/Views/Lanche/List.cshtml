@@ -1,0 +1,17 @@
+@* apagou o using pois já esta sendo referenciado no _ViewImports *@
+@* @model IEnumerable<Lanche> *@
+@model LancheListViewModel
+
+<div>
+  @* <h2>Todos os Lanches</h2> *@
+  <h2>@Model.CategoriaAtual</h2>
+</div>
+
+<div class="row">
+@* @foreach (var lanche in Model) *@
+@foreach (var lanche in Model.Lanches)
+{
+  @* @Html.Partial("_LanchesResumo", lanche); *@
+  <partial name="_LanchesResumo" for="@lanche" />
+}
+</div>
